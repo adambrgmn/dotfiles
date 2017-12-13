@@ -3,20 +3,23 @@
 	email = adam@fransvilhelm.com
 
 [alias]
-	update-from = "!f() { git fetch $1 --prune; git merge --ff-only $1/$2 || git rebase --preserve-merges $1/$2; }; f"
+	glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	prune = fetch --prune
+	undo = reset --soft HEAD^
+	update-from = "!f() { git fetch $1 --prune; git merge --ff-only $1/$2 || git rebase --preserve-merges $1/$2; }; f"
 
 [filter "lfs"]
 	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
 	required = true
+	smudge = git-lfs smudge %f
 
 [color]
-	ui = auto
 	branch = auto
 	diff = auto
 	interactive = auto
 	status = auto
+	ui = auto
 
 [push]
 	default = matching

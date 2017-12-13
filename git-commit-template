@@ -1,3 +1,7 @@
 # Commit title (max 50 chars)
+# If applied, this commit will...
 
 # Commit body (break at 72 chars)
+
+# Fix #123
+# See also #456, #789
