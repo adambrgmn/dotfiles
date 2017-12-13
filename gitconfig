@@ -1,0 +1,28 @@
+[user]
+	name = Adam Bergman
+	email = adam@fransvilhelm.com
+[alias]
+	update-from = "!f() { git fetch $1 --prune; git merge --ff-only $1/$2 || git rebase --preserve-merges $1/$2; }; f"
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log log --graph --decorate --pretty=oneline --abbrev-commit --all
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[color]
+	ui = true
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[push]
+	default = matching
+[core]
+	editor = vim
+[commit]
+	template = /Users/adam/.git-commit-template
+	gpgsign = false
+[gpg]
+	program = gpg
+[github]
+	user = adambrgmn
