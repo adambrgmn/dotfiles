@@ -65,7 +65,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nano'
+  export EDITOR='vim'
 else
   export EDITOR='nano'
 fi
@@ -91,10 +91,6 @@ export NVM_DIR="$HOME/.nvm"
 # added by travis gem
 [ -f /Users/adam/.travis/travis.sh ] && source /Users/adam/.travis/travis.sh
 
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /Users/adam/Development/status-app/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/adam/Development/status-app/node_modules/tabtab/.completions/electron-forge.zsh
-
 # GO setup
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/Documents/go"
@@ -103,13 +99,6 @@ export PATH="$HOME/Documents/go/bin:$PATH"
 # Ellipsis setup (http://ellipsis.sh/)
 export ELLIPSIS_USER=adambrgmn
 export PATH="$HOME/.ellipsis/bin:$PATH"
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/adam/Development/playground/step-functions/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/adam/Development/playground/step-functions/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/adam/Development/playground/step-functions/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/adam/Development/playground/step-functions/node_modules/tabtab/.completions/sls.zsh
 
 # Setup of https://github.com/sindresorhus/pure
 autoload -U promptinit; promptinit
