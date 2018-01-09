@@ -13,6 +13,13 @@ pkg.push() {
   git.push
 }
 
+pkg.link() {
+  mkdir -p "${ELLIPSIS_HOME}/.iTerm2"
+  fs.link_file "${PKG_PATH}/.iTerm2/com.googlecode.iTerm2.plist" "${ELLIPSIS_HOME}/.iTerm2/com.googlecode.iterm2.plist"
+  
+  fs.link_files $PKG_PATH
+}
+
 pkg.pull() {
   # Use improved update strategy
   git remote update 2>&1 > /dev/null
