@@ -30,6 +30,7 @@
 
 [commit]
 	template = ~/.git-commit-template
+	cleanup = strip
 
 [gpg]
 	program = gpg
