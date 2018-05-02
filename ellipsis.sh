@@ -25,7 +25,7 @@ pkg.install() {
       msg.bold "Skip installing $plugin"
     else
       msg.bold "Installing $plugin"
-      git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_PLUGINS/$plugin --quiet
+      git clone https://github.com/zsh-users/$plugin $ZSH_PLUGINS/$plugin --quiet
     fi
   done
 }
