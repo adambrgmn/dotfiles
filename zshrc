@@ -5,6 +5,7 @@ export ZSH=~/.oh-my-zsh
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/Documents/go/bin:$PATH"
 export PATH="$HOME/.ellipsis/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 ZSH_THEME=""
 plugins=(git sublime npm git-flow zsh-syntax-highlighting zsh-autosuggestions)
