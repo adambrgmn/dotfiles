@@ -2,8 +2,9 @@
 # adambrgmn/dotfiles - ellipsis package
 ELLIPSIS_VERSION_DEP='1.9.4'
 
+ZSH_CUSTOM="${ZSH}/custom"
 ZSH_PLUGINS="${ZSH}/custom/plugins"
-DIRS=(".iTerm2")
+DIRS=()
 
 ZSH_DEPS=(zsh-autosuggestions zsh-syntax-highlighting)
 NPM_DEPS=(pure-prompt commitizen flow-bin npm)
@@ -61,23 +62,34 @@ pkg.pull() {
     pkg.link
   fi
 
-  # Update dependencies
+  # Update npm dependencies
   for plugin in ${NPM_DEPS[@]}; do
-    msg.dim $(msg.tabs) "updating $plugin"
+    msg.dim $(msg.tabs) "updating npm dependecy $plugin"
     npm i -g $plugin --silent
   done
 
+  # Update ZSH plugins
   for plugin in ${ZSH_DEPS[@]}; do
     cd "$ZSH_PLUGINS/$plugin"
 
     git remote update 2>&1 > /dev/null
     if git.is_behind; then
-      msg.dim "updating dependency $plugin"
+      msg.dim "updating zsh plugin $plugin"
       git pull
     else
-      msg.dim "skip updating $plugin"
+      msg.dim "skip updating zsh plugin $plugin"
     fi
   done
+
+  # Update ZSH custom scripts
+  cd ${ZSH_CUSTOM}
+  git remote update 2>&1 > /dev/null
+  if git.is_behind; then
+    msg.dim "updating custom zsh scripts"
+    git pull
+  else
+    msg.dim "skip updating custom zsh scripts"
+  fi
 
   cd $PKG_PATH
 }
