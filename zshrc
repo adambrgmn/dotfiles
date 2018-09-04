@@ -6,6 +6,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/Documents/go/bin:$PATH"
 export PATH="$HOME/.ellipsis/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$HOME/Library/Python/3.7/bin"
 
 ZSH_THEME=""
 plugins=(git sublime npm git-flow zsh-syntax-highlighting zsh-autosuggestions)
@@ -58,6 +59,9 @@ CL_LIGHT_CYAN='\033[1;36m'
 CL_LIGHT_GRAY='\033[0;37m'
 CL_WHITE='\033[1;37m'
 CL_NONE='\033[0m'
+
+# Alias
+alias did="vim +'normal Go' +'r!date' ~/did.txt" # Short to jot down someting about what I have done
 
 # General messages on startup
 echo -e "⚡️ Remember to run ${CL_BLUE}'ellipsis pull'${CL_NONE} every now and then"
