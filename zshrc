@@ -10,6 +10,9 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 ZSH_THEME=""
 plugins=(git sublime npm git-flow zsh-syntax-highlighting zsh-autosuggestions)
 
+# ZSH Completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
