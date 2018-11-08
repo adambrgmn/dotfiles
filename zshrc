@@ -62,11 +62,8 @@ CL_LIGHT_GRAY='\033[0;37m'
 CL_WHITE='\033[1;37m'
 CL_NONE='\033[0m'
 
-# Alias
-alias did="vim +'normal Go' +'r!date' ~/did.txt" # Short to jot down someting about what I have done
-
 # General messages on startup
-echo -e "🚀 ${CL_GREEN}node:${CL_NONE} ${$(node -v)/v/""}"
+echo -e "🚀 ${CL_GREEN}node:${CL_NONE} ${$(node -v)/v/}"
 echo -e "📦 ${CL_GREEN}npm:${CL_NONE}  $(npm -v)"
 echo -e "📦 ${CL_GREEN}yarn:${CL_NONE} $(yarn -v)"
-echo -e "⚡️ Remember to run ${CL_BLUE}'ellipsis pull'${CL_NONE} every now and then"
+echo -e "\n⚡️ Remember to run ${CL_BLUE}'ellipsis pull && ellipsis link'${CL_NONE} every now and then"
