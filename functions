@@ -51,7 +51,7 @@ function clone {
 
 # Run Create React App and cd into the app cirectory
 cra() {
-  npx create-react-app $1 && cd $1
+  npx create-react-app $1 && cd $1 && code .
 }
 
 # Launch installed browsers for a specific URL
