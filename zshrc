@@ -75,4 +75,4 @@ CL_NONE='\033[0m'
 echo -e "🚀 ${CL_GREEN}node:${CL_NONE} ${$(node -v)/v/}"
 echo -e "📦 ${CL_GREEN}npm:${CL_NONE}  $(npm -v)"
 echo -e "📦 ${CL_GREEN}yarn:${CL_NONE} $(yarn -v)"
-echo -e "\n⚡️ Remember to run ${CL_BLUE}'ellipsis pull && ellipsis link'${CL_NONE} every now and then"
+echo -e "\n⚡️ Remember to run ${CL_BLUE}'ellipsis pull && ellipsis link dotfiles'${CL_NONE} every now and then"
