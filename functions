@@ -46,7 +46,7 @@ function clone {
     url="git@github.com:$url/$repo.git";
   fi
 
-  git clone $url $repo && cd $repo && atom .;
+  git clone $url $repo && cd $repo && code .;
 }
 
 # Run Create React App and cd into the app cirectory
@@ -58,7 +58,6 @@ cra() {
 # Usage: browsers "http://www.google.com"
 function browsers(){
 	chrome $1
-	opera $1
 	firefox $1
 	safari $1	
 }
