@@ -1,3 +1,12 @@
+# Load other important files
+for file in ~/.{aliases,functions}; do
+  [ -r "$file" ] && source "$file"
+done
+unset file
+
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
