@@ -56,6 +56,12 @@ cra() {
   npx create-react-app $1 && cd $1 && code .
 }
 
+# Serve the current directory (no arg) or a specified
+# directory (arg 1) on localhost
+serve() {
+  npx serve $1
+}
+
 # Launch installed browsers for a specific URL
 # Usage: browsers "http://www.google.com"
 function browsers(){
