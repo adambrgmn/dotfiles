@@ -27,7 +27,7 @@
 
 function clone {
   # customize username to your own 
-  local username="jaredpalmer"
+  local username=$(git config --global github.user)
 
   local url=$1;
   local repo=$2;
@@ -46,10 +46,12 @@ function clone {
     url="git@github.com:$url/$repo.git";
   fi
 
+  echo "🧬 Cloning ${CL_GREEN}${url}${CL_NONE} into ${CL_GREEN}${repo}${CL_NONE}"
   git clone $url $repo && cd $repo && code .;
 }
 
-# Run Create React App and cd into the app cirectory
+# Run Create React App, cd into the app directory and open it in VS Code
+# Usage: cra my-new-project
 cra() {
   npx create-react-app $1 && cd $1 && code .
 }

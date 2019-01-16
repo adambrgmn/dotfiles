@@ -1,9 +1,3 @@
-# Load other important files
-for file in ~/.{aliases,functions}; do
-  [ -r "$file" ] && source "$file"
-done
-unset file
-
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
@@ -70,6 +64,12 @@ CL_LIGHT_CYAN='\033[1;36m'
 CL_LIGHT_GRAY='\033[0;37m'
 CL_WHITE='\033[1;37m'
 CL_NONE='\033[0m'
+
+# Load other important files
+for file in ~/.{aliases,functions}; do
+  [ -r "$file" ] && source "$file"
+done
+unset file
 
 # General messages on startup
 echo -e "🚀 ${CL_GREEN}node:${CL_NONE} ${$(node -v)/v/}"
