@@ -81,5 +81,5 @@ function gurl() {
 
 # Open current repos GitHub URL in the browser
 function ogurl() {
-  open $(ogurl);
+  open $(gurl)
 }
