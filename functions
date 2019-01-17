@@ -78,3 +78,8 @@ function gurl() {
   local user_repo="$(echo "$remote" | perl -pe 's/.*://;s/\.git$//')"
   echo "https://github.com/$user_repo"
 }
+
+# Open current repos GitHub URL in the browser
+function ogurl() {
+  open $(ogurl);
+}
