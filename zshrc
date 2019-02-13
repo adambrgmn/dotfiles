@@ -48,7 +48,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # Load other important files
-for file in ~/.{aliases,autocomplete,colors,functions}; do
+for file in ~/.{aliases,autocomplete,colors,functions,settings}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
