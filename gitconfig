@@ -8,6 +8,8 @@
 	prune = fetch --prune
 	undo = reset --soft HEAD^
 	update-from = "!f() { git fetch $1 --prune; git merge --ff-only $1/$2 || git rebase --preserve-merges $1/$2; }; f"
+	co = checkout
+	cob = checkout -b
 
 [filter "lfs"]
 	clean = git-lfs clean %f
