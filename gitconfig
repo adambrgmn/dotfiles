@@ -8,6 +8,7 @@
 	prune = fetch --prune
 	undo = reset --soft HEAD^
 	update-from = "!f() { git fetch $1 --prune; git merge --ff-only $1/$2 || git rebase --preserve-merges $1/$2; }; f"
+	uf = "!f() { git fetch origin --prune; git merge --ff-only origin/\"$(git rev-parse --abbrev-ref HEAD)\" || git rebase --preserve-merges origin/\"$(git rev-parse --abbrev-ref HEAD)\"; }; f"
 	co = checkout
 	cob = checkout -b
 
