@@ -28,7 +28,7 @@
 	default = matching
 
 [core]
-	editor = vim
+	editor = code --wait
 	excludesfile = /Users/adam/.gitignore_global
 
 [commit]
