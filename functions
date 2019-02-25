@@ -51,9 +51,9 @@ function clone {
 }
 
 # Run Create React App, cd into the app directory and open it in VS Code
-# Usage: cra my-new-project
+# Usage: cra my-new-project [--flags]
 cra() {
-  npx create-react-app $1 && cd $1 && code .
+  npx create-react-app $1 ${@:2:99} && cd $1 && code .
 }
 
 # Serve the current directory (no arg) or a specified
