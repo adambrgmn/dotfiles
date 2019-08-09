@@ -1,0 +1,8 @@
+# Some scripts to customize iTerm2
+# https://www.iterm2.com/3.3/documentation-scripting-fundamentals.html
+
+iterm2_print_user_vars() {
+  iterm2_set_user_var version_node "${$(node -v)/v/}"
+  iterm2_set_user_var version_npm $(npm -v)
+  iterm2_set_user_var version_yarn $(yarn -v)
+}

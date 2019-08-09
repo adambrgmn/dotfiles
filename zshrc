@@ -47,14 +47,24 @@ export ELLIPSIS_USER=adambrgmn
 autoload -U promptinit; promptinit
 prompt pure
 
+# iTerm2 Shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # Load other important files
-for file in ~/.{aliases,autocomplete,colors,functions,settings}; do
+for file in ~/.{aliases,autocomplete,colors,functions,iterm-scripts,settings}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
 
-# General messages on startup
-echo -e "🚀 ${CL_GREEN}node:${CL_NONE} ${$(node -v)/v/}"
-echo -e "📦 ${CL_GREEN}npm:${CL_NONE}  $(npm -v)"
-echo -e "📦 ${CL_GREEN}yarn:${CL_NONE} $(yarn -v)"
 echo -e "\n⚡️ Remember to run ${CL_BLUE}'ellipsis pull && ellipsis link dotfiles'${CL_NONE} every now and then"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/adam/Development/nanny/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/adam/Development/nanny/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/adam/Development/nanny/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/adam/Development/nanny/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/adam/Development/nanny/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/adam/Development/nanny/node_modules/tabtab/.completions/slss.zsh
+
