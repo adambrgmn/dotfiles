@@ -55,29 +55,6 @@ function clone {
 cra() {
   npx create-react-app $1 ${@:2:99}
   cd $1
-  yarn add --dev prettier lint-staged husky
-  echo "Add the following to package.json:
-  {
-    \"husky\": {
-      \"hooks\": {
-        \"pre-commit\": \"lint-staged\"
-      }
-    },
-    \"lint-staged\": {
-      \"concurrent\": false,
-      \"linters\": {
-        \"*.{js,ts,json,md,yml,css,scss,php}\": [
-          \"prettier --write\",
-          \"git add\"
-        ]
-      }
-    },
-    \"prettier\": {
-      \"singleQuote\": true,
-      \"trailingComma\": \"all\",
-      \"proseWrap\": \"always\"
-    }
-  }"
   code .
 }
 
