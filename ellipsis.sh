@@ -7,7 +7,7 @@ ZSH_PLUGINS="${ZSH}/custom/plugins"
 DIRS=()
 
 ZSH_DEPS=(zsh-autosuggestions zsh-syntax-highlighting)
-NPM_DEPS=(pure-prompt commitizen flow-bin npm)
+NPM_DEPS=(pure-prompt)
 
 pkg.install() {
   # Install npm dependencies
