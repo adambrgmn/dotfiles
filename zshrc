@@ -57,14 +57,3 @@ done
 unset file
 
 echo -e "\n⚡️ Remember to run ${CL_BLUE}'ellipsis pull && ellipsis link dotfiles'${CL_NONE} every now and then"
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/adam/Development/nanny/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/adam/Development/nanny/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/adam/Development/nanny/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/adam/Development/nanny/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/adam/Development/nanny/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/adam/Development/nanny/node_modules/tabtab/.completions/slss.zsh
-
