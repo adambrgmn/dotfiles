@@ -85,3 +85,14 @@ function gurl() {
 function ogurl() {
   open $(gurl)
 }
+
+# Install types from DefinitelyTyped for provided packages
+function yarnt() {
+  local packages=""
+
+  for package in "$@"; do
+    packages="@types/$package "
+  done
+
+  yarn add --dev $packages
+}
