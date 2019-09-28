@@ -14,6 +14,7 @@ export PATH="$HOME/.ellipsis/bin:$PATH" # Ellipsis dotfiles
 export PATH="$HOME/.composer/vendor/bin:$PATH" # Composer PHP
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
+export PATH="/usr/local/bin:$PATH" # Homebrew
 
 ZSH_THEME=""
 plugins=(git sublime npm git-flow zsh-syntax-highlighting zsh-autosuggestions)
