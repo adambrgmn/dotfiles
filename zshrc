@@ -1,3 +1,5 @@
+[ -r "$HOME/.env" ] && source "$HOME/.env"
+
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
