@@ -2,6 +2,7 @@
 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
+export GPG_TTY=$(tty)
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
