@@ -16,6 +16,12 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH" # Homebrew
 
+if [[ $PATH == *"Local.app"* ]] then;
+  export PATH="/Applications/Local.app/Contents/Resources/extraResources/site-binaries/mysql-8.0.15/bin:$PATH"
+  export PATH="/Applications/Local.app/Contents/Resources/extraResources/site-binaries/php-7.3.5/bin:$PATH"
+  export PATH="/Applications/Local.app/Contents/Resources/extraResources/site-binaries/wp-cli/bin:$PATH"
+fi
+
 ZSH_THEME=""
 plugins=(git sublime npm git-flow zsh-syntax-highlighting zsh-autosuggestions)
 
