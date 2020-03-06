@@ -1,8 +1,23 @@
 # Some scripts to customize iTerm2
 # https://www.iterm2.com/3.3/documentation-scripting-fundamentals.html
 
+get_tsc_version() {
+  TSC_VERSION="N/A"
+  
+  if test -f "./node_modules/.bin/tsc"; then
+    TSC_VERSION="$(./node_modules/.bin/tsc --version)"
+  elif [ -x "$(command -v tsc)" ]; then
+    TSC_VERSION="$(tsc --version)"
+  else
+    TSC_VERISION="N/A"
+  fi
+
+  echo "${${TSC_VERSION}/Version /}"
+}
+
 iterm2_print_user_vars() {
   iterm2_set_user_var version_node "${$(node -v)/v/}"
   iterm2_set_user_var version_npm $(npm -v)
   iterm2_set_user_var version_yarn $(yarn -v)
+  iterm2_set_user_var version_tsc "$(get_tsc_version)"
 }
