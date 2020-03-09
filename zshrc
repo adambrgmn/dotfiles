@@ -1,3 +1,6 @@
+# https://stackoverflow.com/a/50011895
+PATH="/usr/local/bin:$(getconf PATH)"
+
 [ -r "$HOME/.env" ] && source "$HOME/.env"
 
 export LC_ALL="en_US.UTF-8"
