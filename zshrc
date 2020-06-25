@@ -45,7 +45,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # rbenv
-eval "$(rbenv init -)"
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # travis
 [ -f /Users/adam/.travis/travis.sh ] && source /Users/adam/.travis/travis.sh
@@ -56,6 +57,9 @@ export GOPATH="$HOME/Documents/go"
 
 # Ellipsis setup (http://ellipsis.sh/)
 export ELLIPSIS_USER=adambrgmn
+
+# Source asdf bin
+. /Users/adambergman/.asdf/asdf.sh
 
 # Setup of https://github.com/sindresorhus/pure
 autoload -U promptinit; promptinit

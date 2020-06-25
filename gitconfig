@@ -1,6 +1,6 @@
 [include]
 	path = ~/.gitconfig.local
-	
+
 [user]
 	name = Adam Bergman
 	email = adam@fransvilhelm.com
@@ -8,7 +8,6 @@
 [alias]
 	glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	prune = fetch --prune
 	undo = reset --soft HEAD^
 	update-from = "!f() { git fetch $1 --prune; git merge --ff-only $1/$2 || git rebase --preserve-merges $1/$2; }; f"
 	uf = "!f() { git fetch origin --prune; git merge --ff-only origin/\"$(git rev-parse --abbrev-ref HEAD)\" || git rebase --preserve-merges origin/\"$(git rev-parse --abbrev-ref HEAD)\"; }; f"
