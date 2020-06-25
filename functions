@@ -4,7 +4,7 @@
 # Based on https://github.com/stephenplusplus/dots/blob/master/.bash_profile#L68 by @stephenplusplus
 #
 # Note: subl is already setup as a shortcut to Sublime. Replace with your own editor if different
-# 
+#
 # - arg 1 - url|username|repo remote endpoint, username on github, or name of
 #           repository.
 # - arg 2 - (optional) name of repo
@@ -26,7 +26,7 @@
 #     .. subl .
 
 function clone {
-  # customize username to your own 
+  # customize username to your own
   local username=$(git config --global github.user)
 
   local url=$1;
@@ -58,6 +58,26 @@ cra() {
   code .
 }
 
+dev() {
+  cd "${HOME}/Development/${1}"
+
+  if [ -z "${2+x}"]; then
+  else
+    cd $2
+    code .
+  fi
+}
+
+play() {
+  cd "${HOME}/Development/playground"
+  if [ -z "${1+x}" ]; then
+  else
+    mkdir $1
+    cd $1
+    code .
+  fi
+}
+
 # Serve the current directory (no arg) or a specified
 # directory (arg 1) on localhost
 serve() {
@@ -69,7 +89,7 @@ serve() {
 function browsers(){
 	chrome $1
 	firefox $1
-	safari $1	
+	safari $1
 }
 
 # GitHub URL for current repo.
