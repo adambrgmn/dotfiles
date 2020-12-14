@@ -1,9 +1,9 @@
-[include]
-	path = ~/.gitconfig.local
-
 [user]
 	name = Adam Bergman
 	email = adam@fransvilhelm.com
+
+[github]
+	user = adambrgmn
 
 [alias]
 	glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
@@ -13,12 +13,7 @@
 	uf = "!f() { git fetch origin --prune; git merge --ff-only origin/\"$(git rev-parse --abbrev-ref HEAD)\" || git rebase --preserve-merges origin/\"$(git rev-parse --abbrev-ref HEAD)\"; }; f"
 	co = checkout
 	cob = checkout -b
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	required = true
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+	stat = diff --stat master HEAD
 
 [color]
 	branch = auto
@@ -37,14 +32,10 @@
 	safecrlf = true
 
 [commit]
-	template = ~/.git-commit-template
 	cleanup = strip
-
-[gpg]
-	program = gpg
-
-[github]
-	user = adambrgmn
 
 [credential]
 	helper = osxkeychain
+
+[init]
+	defaultBranch = main
