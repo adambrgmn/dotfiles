@@ -23,7 +23,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo "😎 Hello $(whoami)! Let's get set up"
 
 echo "💾 creating development folder"
-mkdir -p $(HOME)/development
+mkdir -p $(HOME)/Developer
 
 echo "🚀 install nvm and latest node"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash

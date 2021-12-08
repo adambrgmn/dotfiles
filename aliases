@@ -6,3 +6,5 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Checkout a GitHub PR
 alias checkout="gh pr checkout"
+
+alias nx="yarn nx"

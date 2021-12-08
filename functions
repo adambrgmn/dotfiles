@@ -59,7 +59,7 @@ cra() {
 }
 
 dev() {
-  cd "${HOME}/Development/${1}"
+  cd "${HOME}/Developer/${1}"
 
   if [ -z "${2+x}"]; then
   else
@@ -69,7 +69,7 @@ dev() {
 }
 
 play() {
-  cd "${HOME}/Development/playground"
+  cd "${HOME}/Developer/playground"
   if [ -z "${1+x}" ]; then
   else
     mkdir $1

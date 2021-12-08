@@ -11,19 +11,13 @@ export GPG_TTY=$(tty)
 export ZSH=~/.oh-my-zsh
 
 # Path setup
-export PATH="$HOME/.rbenv/bin:$PATH" # Ruby
 export PATH="$HOME/Documents/go/bin:$PATH" # Go
 export PATH="$HOME/.ellipsis/bin:$PATH" # Ellipsis dotfiles
 export PATH="$HOME/.composer/vendor/bin:$PATH" # Composer PHP
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH" # Homebrew
-
-if [[ $PATH == *"Local.app"* ]]; then
-  export PATH="/Applications/Local.app/Contents/Resources/extraResources/site-binaries/mysql-8.0.15/bin:$PATH"
-  export PATH="/Applications/Local.app/Contents/Resources/extraResources/site-binaries/php-7.3.5/bin:$PATH"
-  export PATH="/Applications/Local.app/Contents/Resources/extraResources/site-binaries/wp-cli/bin:$PATH"
-fi
+export PATH="$HOME/.rbenv/bin:$PATH" # Ruby
 
 ZSH_THEME=""
 plugins=(git sublime npm git-flow zsh-syntax-highlighting zsh-autosuggestions)
@@ -57,9 +51,6 @@ export GOPATH="$HOME/Documents/go"
 
 # Ellipsis setup (http://ellipsis.sh/)
 export ELLIPSIS_USER=adambrgmn
-
-# Source asdf bin
-. /Users/adambergman/.asdf/asdf.sh
 
 # Setup of https://github.com/sindresorhus/pure
 autoload -U promptinit; promptinit
